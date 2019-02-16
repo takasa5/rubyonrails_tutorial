@@ -11,9 +11,9 @@
 # #
 # port        ENV.fetch("PORT") { 3000 }
 
-# # Specifies the `environment` that Puma will run in.
-# #
-# environment ENV.fetch("RAILS_ENV") { "development" }
+# Specifies the `environment` that Puma will run in.
+#
+# environment ENV.fetch("RAILS_ENV") { "production" }
 
 # # Specifies the number of `workers` to boot in clustered mode.
 # # Workers are forked webserver processes. If using threads and workers together
@@ -55,7 +55,7 @@
 # # Allow puma to be restarted by `rails restart` command.
 # plugin :tmp_restart
 
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+# workers Integer(ENV['WEB_CONCURRENCY'] || 2)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
